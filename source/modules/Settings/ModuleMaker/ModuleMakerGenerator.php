@@ -425,7 +425,7 @@ class ModuleMakerGenerator {
 	protected function fillScript() {
 		global $table_prefix;
 		
-		require('vteversion');
+		require('vteversion.php');
 		
 		$createTables = array();
 		foreach ($this->tables as $tname=>$fields) {

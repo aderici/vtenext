@@ -796,22 +796,25 @@ i[data-fastpanel]:hover:not(.disabled):not(.nohover) {
 }
 
 .vteCenterHeader ul, .vteUlTable {
-	display: table-cell;
-	vertical-align: middle;
+	display: block;
 	margin: 0;
 	padding: 0;
 	height: 50px;
 	width: 100%;
+	text-align: left;
 	
 	& > li {
-		padding: 0;
+		padding: 3px;
 		margin: 0;
-		display: inline;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	&:before {
+		content: "";
+		display: inline-block;
+		vertical-align: middle;
 		height: 100%;
-		
-		& button {
-			vertical-align: top;
-		}
 	}
 }
 

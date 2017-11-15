@@ -28,6 +28,7 @@
                 <!-- crmv@30683 -->
 				<div align=center>
 					{include file='Buttons_List.tpl'}
+					{include file='Buttons_List_Contestual.tpl'}
 
 					{* crmv@30683 crmv@31415 *}
 					<table border=0 cellspacing=0 cellpadding=5 width="100%" class="settingsSelUITopLine">

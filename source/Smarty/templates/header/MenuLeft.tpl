@@ -26,12 +26,12 @@
 
 <div id="vteWrapper">
 
+<div id="status" style="display:none;">{include file="LoadingIndicator.tpl"}</div>
+
 {if $HIDE_MENUS neq true}
 
 {* HEADER BAR *}
 <header id="vteHeader" data-minified="{$toggleState}" data-full="{$HIDE_MENUS}"></header>
-
-<div id="status" style="display:none;">{include file="LoadingIndicator.tpl"}</div>
 
 <div id="mainContainer" data-minified="{$toggleState}">
 
