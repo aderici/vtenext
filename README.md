@@ -15,7 +15,7 @@ This one allows you to draw and manage company processes in advanced way and to 
           <tr>
               <td>
                   <p align="center"> 
-                      <a href="/VTECRM/vtenext/archive/master.zip" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview"> Download the repository zip </a><br> Extract this zip to your hard drive root. 
+                      <a href="/archive/master.zip" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview"> Download the repository zip </a><br> Extract this zip to your hard drive root. 
                   </p>             
               </td>
               <td>
