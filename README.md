@@ -1,31 +1,31 @@
 <h1 vertical-align="middle"><img src="https://www.vtenext.com/images/logonextnew.png" data-canonical-src="https://www.vtenext.com/images/logonextnew.png" width="110" height="40"> &nbsp; Introduction</h1>
 
-VTENEXT is the Open Source CRM solution offering the latest innovative tools powered by a BMP engine. 
+<b> `VTENEXT` </b> is the <b>Open Source CRM solution</b> offering the latest innovative tools powered by a BMP engine. 
 This one allows you to draw and manage company processes in advanced way and to integrate devices connected to the network. 
 <h3><i> A developing Open Source to dive into the IoT world! </i></h3>
 
-# Getting Started
+# :books: Getting Started :books:
 <table style="width:100%">
     <thead>
           <tr>                      
-              <th width="33%"><p align="center"> Step 1 </p> </th>
-              <th width="33%"><p align="center"> Step 2 </p> </th>
-              <th width="33%"><p align="center"> Step 3 </p> </th>
+              <th width="33%"><p align="center"> <b><h3>Step 1</h3></b> </p> </th>
+              <th width="33%"><p align="center"> <b><h3>Step 2</h3></b> </p> </th>
+              <th width="33%"><p align="center"> <b><h3>Step 3</h3></b> </p> </th>
           </tr>
           <tr>
               <td>
                   <p align="center"> 
-                      <a href="https://github.com/VTECRM/vtenext/archive/master.zip" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview"> Download the repository zip </a><br> Extract this zip to your hard drive root. 
+                      <a href="https://github.com/VTECRM/vtenext/archive/master.zip" rel="nofollow" data-ga-click="Repository, download zip, location:repo overview"> Download the repository zip </a><br> <b>Extract this zip</b> to your hard drive root. 
                   </p>             
               </td>
               <td>
                   <p align="center"> 
-                      Open your FTP client and upload the <br>VTENEXT CE onto the web server desired.
+                      Open your <b>FTP client</b> and upload the <br>VTENEXT CE onto the web server desired.
                   </p> 
               </td>
               <td>
                   <p align="center"> 
-                      Open your URL web browser <br>where you uploaded VTENEXT CE.<br><i>Follow the Configuration Wizard!</i>
+                      Open your <b>URL web browser</b> <br>where you uploaded VTENEXT CE.<br><i>Follow the Configuration Wizard!</i>
                   </p>
               </td>
          </tr>
@@ -34,14 +34,14 @@ This one allows you to draw and manage company processes in advanced way and to 
 
 
 
-## STEP 1:
+## :arrow_forward: STEP 1:
 Download the latest release of VTENEXT CE from this project page.<br>
-Unzip the zip fle to a folder on your hard drive. This will create a folder containing the files and directories (the software will be in the "source" directory).
-## STEP 2:
-Open your FTP client and upload the VTENEXT CE files in ‘binary mode’ to the desired location on your web server. All fles can be uploaded to a “vtenext” sub-directory in your public www folder, for example http://yourdomain.org/vtenext/or you could setup
+<b>Unzip the zip</b> fle to a folder on your hard drive. This will create a folder containing the files and directories (the software will be in the "source" directory).
+## :arrow_forward: STEP 2:
+Open your <b>FTP client</b> and upload the VTENEXT CE files in ‘binary mode’ to the desired location on your web server. All fles can be uploaded to a “vtenext” sub-directory in your public www folder, for example http://yourdomain.org/vtenext/or you could setup
 VTENEXT CE in its own subdomain and upload all the files, for example http://vtenext.mycompany.com
-## STEP 3:
-Open your web browser and navigate to the URL where you uploaded VTENEXT CE. If everything is uploaded correctly, you should see the `Configuration Wizard`. If there are any problems, <img src="https://www.vtenext.com/images/wizard.png" data-canonical-src="https://www.vtenext.com/images/wizard.png" width="414" height="175" align="right"> <br>
+## :arrow_forward: STEP 3:
+Open your <b>web browser</b> and navigate to the <b>URL</b> where you uploaded VTENEXT CE. If everything is uploaded correctly, you should see the `Configuration Wizard`. If there are any problems, <img src="https://www.vtenext.com/images/wizard.png" data-canonical-src="https://www.vtenext.com/images/wizard.png" width="414" height="175" align="right"> <br>
 VTENEXT CE will identify them and help you out with a solution, otherwise follow step by step the instructions to have the software correctly installed.
 
 <br><br><br><br><br><br><br>
@@ -56,21 +56,21 @@ VTENEXT CE will identify them and help you out with a solution, otherwise follow
         </tr>
         <tr>
             <th style="width:50%">
-                <p align="center">PHP5</p>
+                <p align="center"><b>PHP5</b></p>
             </th>
              <th style="width:50%">
-                <p align="center">PHP7</p>
+                 <p align="center"><b>PHP7</b></p>
             </th>
         </tr>
         <tr>
             <td style="width:50%"> 
                 <p align="left"> 
-                    Edit<br>1 - /etc/php5/apache2/php.ini<br>2 - /etc/php5/cli/php.ini<br><br><i>with following parameters:</i>
+                    <b>Edit</b><br>1 - /etc/php5/apache2/php.ini<br>2 - /etc/php5/cli/php.ini<br><br><i>with following parameters:</i>
                 </p>
             </td>
             <td style="width:50%"> 
                 <p align="left">
-                    Edit<br>1 - /etc/php/7.0/apache2/php.ini<br>2 - /etc/php/7.0/cli/php.ini<br><br><i>with following parameters:</i>
+                    <b>Edit</b><br>1 - /etc/php/7.0/apache2/php.ini<br>2 - /etc/php/7.0/cli/php.ini<br><br><i>with following parameters:</i>
                 </p>
             </td>
         </tr>
@@ -112,14 +112,14 @@ projects more effective, so VTENEXT was born.
 
 # We Like: <img src="https://www.vtenext.com/images/thumbsup.png" data-canonical-src="https://www.vtenext.com/images/thumbsup.png" width="45" height="46">
 
-<p align="left"> ▪ <b>Freedom</b>: VTENEXT can be customized and the development remains yours.<br>▪ <b>Scalability</b> and <b>flexibility</b>: the solution can be tailored to any type of business<br>▪ Know how <b>spread</b>: We give to the community all the most advanced features of VTENEXT<br>▪ <b>Enhancing</b> community <b>work</b>: We select and value the best contributions of the community </p>
+<p align="left"> :heavy_check_mark: <b>Freedom</b>: VTENEXT can be customized and the development remains yours.<br>:heavy_check_mark: <b>Scalability</b> and <b>flexibility</b>: the solution can be tailored to any type of business<br>:heavy_check_mark: Know how <b>spread</b>: We give to the community all the most advanced features of VTENEXT<br>:heavy_check_mark: <b>Enhancing</b> community <b>work</b>: We select and value the best contributions of the community </p>
           
 <br><br>
           
           
 # We Don’t Like: <img src="https://www.vtenext.com/images/thumbsdown.png" data-canonical-src="https://www.vtenext.com/images/thumbsdown.png" width="45" height="46">
 
-<p align="left">▪ <b>Lock</b> in contracts for customers and distributors.<br>▪ <b>Rating agencies</b><br>▪ <b>High</b> and binding licensing costs.<br>▪ <b>Closed code</b> </p>
+<p align="left">:x: <b>Lock</b> in contracts for customers and distributors.<br>:x: <b>Rating agencies</b><br>:x: <b>High</b> and binding licensing costs.<br>:x: <b>Closed code</b> </p>
           
 <br><br>     
           
@@ -140,4 +140,4 @@ particular situations. </p>
 
 
 # Benefits:
-<p align="left">▪ <b>Reduction of human errors</b> in the procedures execution<br>▪ <b>Speed</b> of execution (Short time of the procedures)<br>▪ <b>Performing simple</b> or complex business procedures in a certain and standardized manner<br>▪ Check bottle necks in the <b>organization</b></p>
+<p align="left">:arrow_down_small: <b>Reduction of human errors</b> in the procedures execution<br><br>:clock10: <b>Speed</b> of execution (Short time of the procedures)<br><br>clipboard: <b>Performing simple</b> or complex business procedures in a certain and standardized manner<br><br>:chart_with_upwards_trend: Check bottle necks in the <b>organization</b></p>
