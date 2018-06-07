@@ -140,4 +140,4 @@ particular situations. </p>
 
 
 # Benefits:
-<p align="left">:arrow_down_small: <b>Reduction of human errors</b> in the procedures execution<br><br>:clock10: <b>Speed</b> of execution (Short time of the procedures)<br><br>clipboard: <b>Performing simple</b> or complex business procedures in a certain and standardized manner<br><br>:chart_with_upwards_trend: Check bottle necks in the <b>organization</b></p>
+<p align="left">:arrow_down_small: <b>Reduction of human errors</b> in the procedures execution<br><br>:clock10: <b>Speed</b> of execution (Short time of the procedures)<br><br>:clipboard: <b>Performing simple</b> or complex business procedures in a certain and standardized manner<br><br>:chart_with_upwards_trend: Check bottle necks in the <b>organization</b></p>
