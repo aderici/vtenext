@@ -2,7 +2,7 @@
 
 <b> `VTENEXT` </b> is the <b>Open Source CRM solution</b> offering the latest innovative tools powered by a BMP engine. 
 This one allows you to draw and manage company processes in advanced way and to integrate devices connected to the network. 
-<h3><i> A developing Open Source to dive into the IoT world! </i></h3>
+<h3><i> A developing Open Source to dive into the BPM software engine! </i></h3>
 
 # :books: Getting Started :books:
 <table style="width:100%">
