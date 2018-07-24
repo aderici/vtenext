@@ -81,7 +81,7 @@ VTENEXT CE will identify them and help you out with a solution, otherwise follow
                 </p>
             </td>
             <td>
-                <p align="left"> 
+                <p align="left">
                     ▪ error_reporting E_ALL &~E_WARNING & ~E_NOTICE &~E_DEPRECATED & ~E_STRICT<br>▪ display_errors On<br>▪ fle_uploads On<br>▪ max_execution_time 600<br>▪ memory_limit 128M<br>▪ log_errors On<br>▪ output_buffering On<br>▪ short_open_tag On 
                 </p>
             </td>
