@@ -1,1 +1,0 @@
-get_js_lang();

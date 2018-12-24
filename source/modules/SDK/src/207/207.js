@@ -1,1 +1,0 @@
-getObj(dtlView).innerHTML = "<a href=\""+encodeURI(tagValue)+"\" target=\"_blank\">"+tagValue+"</a>"; // crmv@80653
