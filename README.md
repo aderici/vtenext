@@ -4,6 +4,12 @@
 This one allows you to draw and manage company processes in advanced way and to integrate devices connected to the network. 
 <h3><i> A developing Open Source to dive into the BPM software engine! </i></h3>
 
+<br>
+&nbsp;&nbsp;Community forum: http://forum.vtecrm.com/
+<br>
+&nbsp;&nbsp;Give us a feedback on SourceForge: https://sourceforge.net/projects/vtecrm/
+<br>
+
 # :books: Getting Started :books:
 <table style="width:100%">
     <thead>
