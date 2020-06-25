@@ -1,0 +1,2 @@
+<?php
+SDK::setLanguageEntries('Settings', 'LBL_IMPORT_PROFILES_BEFORE', array('it_it'=>'E\' necessario importare l\'ultima versione dei profili per poter procedere','en_us'=>'You have to import the last version of profiles'));

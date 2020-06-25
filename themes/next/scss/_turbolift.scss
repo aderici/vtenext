@@ -1,0 +1,104 @@
+
+.turboLiftRelationsContainer {
+	position: relative;
+}
+
+.turbolift {
+	margin-left: 2px;
+	&.nav-stacked li:first-child {
+		border-top: 1px solid $vte-button-border;
+	}
+	&.nav-stacked > li + li {
+		margin-top: 0px;
+	}
+	&.nav-stacked > li:last-child {
+		border-bottom: 0px none;
+	}
+}
+
+.turboliftInner {
+	margin: 5px;
+}
+
+.turboliftEntry,
+.turboliftEntrySelected,
+.turboliftEntry1,
+.turboliftEntry2 {
+	padding: 2px;
+	min-height: 30px;
+	cursor: pointer;
+}
+
+// crmv@104568
+.turboliftEntry,
+.turboliftEntryWithImage {
+	.turboliftLabel {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		//width: 80%;
+	}
+}
+// crmv@104568e
+
+.turboliftEntry {
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid $turbolift-border;
+	background-color: $turbolift-bg;
+	color: $turbolift-color;
+
+	.badge {
+		background-color: $turbolift-badge-bg;
+		color: $turbolift-badge-color;
+		margin-top: 4px;
+	}
+
+	.vteicon,
+	.vteicon2,
+	.icon-module {
+		color: $turbolift-icon-color;
+	}
+}
+
+.turboliftEntrySelected {
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid $turbolift-selected-border;
+	border-left: 1px solid $turbolift-selected-border;
+	border-right: 1px solid $turbolift-selected-border;
+	background-color: $turbolift-selected-bg;
+	color: $turbolift-selected-color;
+
+	.badge {
+		background-color: $turbolift-selected-badge-bg;
+		color: $turbolift-selected-badge-color;
+		margin-top: 4px;
+	}
+	
+	.vteicon,
+	.vteicon2,
+	.icon-module {
+		color: $turbolift-selected-icon-color;
+	}
+}
+
+.turbolift-buttons .crmbutton, 
+.turbolift-buttons .crmButton {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.turbolift-relations {
+	padding: 5px;
+	
+	& .turbolift-card {
+		width: 100%; 
+		margin-top: 5px;
+		box-shadow: none;
+	}
+}
+
+.turbolift-buttons {
+	padding: 5px;
+}

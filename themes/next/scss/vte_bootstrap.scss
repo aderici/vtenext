@@ -1,0 +1,18 @@
+
+/* Import variables */
+@import 'vars/variables';
+
+/* Import colors */
+@import 'vars/colors';
+
+/* Import mixins */
+@import 'vars/mixins';
+
+/* bootstrap font */ // crmv@96742
+$icon-font-path: 'fonts/glyphicons-halflings/';
+
+/* Import Bootstrap engine */
+/* TODO: import only what's needed */
+@import 'bootstrap/_bootstrap.scss';
+
+@import '_vte_bootstrap.scss';

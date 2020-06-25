@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Test general.js extension and override</title>
+    <script src="../../include/js/jquery.js"></script>
+    <script src="../../include/js/general.js"></script>
+  </head>
+  <body>
+  <!-- crmv@147414e -->
+  <script type="text/javascript">
+	
+window.TEST = window.TEST || {}; // namespace for tests
+
+// A <-- B <-- C
+
+TEST.A = TEST.A || {
+	val: 123,
+	text: "text",
+	met: function(p) {
+		return p + this.val;
+	},
+	met3: function(p) {
+		return p*3 + this.val;
+	},
+	met4: function(p) {
+		return p;
+	}
+}
+
+TEST.B = VTE.extend(TEST.A, {
+	val: 5,
+	met: function(p) {
+		return this.callParent(p);
+	},
+	met2: function() {
+		return this.val;
+	}
+});
+
+TEST.C = VTE.extend(TEST.B, {
+	val2: 10,
+	met: function(p) {
+		return this.callParent(p) + 1 ;
+	},
+});
+
+TEST.doOverrideA = function() {
+	VTE.override(TEST.A, {
+		val: 200,
+		val2: 37,
+		val3: 3,
+		met: function(p) {
+			return 2*p + this.val;
+		},
+		met3: function(p) {
+			return this.callOverridden(p);
+		}
+	});
+}
+
+TEST.doOverrideA2 = function() {
+	VTE.override(TEST.A, {
+		val: 0,
+		met: function(p) {
+			return this.callOverridden(p);
+		},
+		met4: function(p) {
+			return this.callOverridden(p) + 3;
+		}
+	});
+}
+
+
+TEST.doOverrideB = function() {
+	VTE.override(TEST.B, {
+		val: 9,
+	});
+}
+
+
+
+jQuery(document).ready(function() {
+
+	try {
+	
+	// extension tests
+	if (TEST.A.val !== 123) throw new Error('Failed');
+	if (TEST.B.val !== 5) throw new Error('Failed');
+	if (TEST.A.met(7) !== 130) throw new Error('Failed');
+	if (TEST.A.met3(7) !== 144) throw new Error('Failed');
+	if (TEST.B.met(7) !== 12) throw new Error('Failed');
+	if (TEST.B.met2() !== 5) throw new Error('Failed');
+	if (TEST.C.val !== 5) throw new Error('Failed');
+	if (TEST.C.val2 !== 10) throw new Error('Failed');
+	if (TEST.B.val2 !== undefined) throw new Error('Failed');
+	if (TEST.C.met2() !== 5) throw new Error('Failed');
+	if (TEST.C.met(1) !== 7) throw new Error('Failed');
+					   
+	// override tests
+	TEST.doOverrideA();
+	
+	if (TEST.A.val !== 200) throw new Error('Failed');
+	if (TEST.A.val2 !== 37) throw new Error('Failed');
+	if (TEST.A.val3 !== 3) throw new Error('Failed');
+	if (TEST.A.met(7) !== 214) throw new Error('Failed');
+	if (TEST.A.met3(2) !== 206) throw new Error('Failed');
+	if (TEST.B.met(7) !== 19) throw new Error('Failed');
+	if (TEST.B.met2() !== 5) throw new Error('Failed');
+	if (TEST.C.val !== 5) throw new Error('Failed');
+	if (TEST.C.val2 !== 10) throw new Error('Failed');
+	if (TEST.B.val2 !== 37) throw new Error('Failed');
+	if (TEST.C.met2() !== 5) throw new Error('Failed');
+	if (TEST.C.met(1) !== 8) throw new Error('Failed');
+	if (TEST.C.val3 !== 3) throw new Error('Failed');
+					   
+	TEST.doOverrideA2();
+	
+	if (TEST.A.val !== 0) throw new Error('Failed');
+	if (TEST.A.met(8) !== 16) throw new Error('Failed');
+	if (TEST.A.met4(7) !== 10) throw new Error('Failed');
+					   
+	TEST.doOverrideB();
+	
+	if (TEST.B.val !== 9) throw new Error('Failed');
+	if (TEST.C.val !== 9) throw new Error('Failed');
+	if (TEST.B.met(7) !== 23) throw new Error('Failed');
+	if (TEST.B.met2() !== 9) throw new Error('Failed');
+	if (TEST.C.met(7) !== 24) throw new Error('Failed');
+	
+	jQuery('#result').html('Success');
+	
+	} catch (e) {
+		jQuery('#result').html('Failed');
+	}
+
+});
+
+  </script>
+	<h2><div id="result"></div></h2>
+  </body>
+</html>

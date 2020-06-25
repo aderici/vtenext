@@ -1,0 +1,92 @@
+<?php
+/*+*************************************************************************************
+* The contents of this file are subject to the VTECRM License Agreement
+* ("licenza.txt"); You may not use this file except in compliance with the License
+* The Original Code is: VTECRM
+* The Initial Developer of the Original Code is VTECRM LTD.
+* Portions created by VTECRM LTD are Copyright (C) VTECRM LTD.
+* All Rights Reserved.
+***************************************************************************************/
+/* crmv@146670 */
+
+global $adb, $table_prefix;
+global $mod_strings,$app_strings, $theme;
+global $current_user, $currentModule, $current_language, $default_language;
+
+require_once('vtlib/Vtecrm/Utils.php');
+require_once('modules/Settings/ExtWSConfig/ExtWSUtils.php');
+
+if ($_REQUEST['ajax'] == 1) {
+	require('modules/Settings/ExtWSConfig/ExtWSAjax.php');
+	return;
+}
+
+$mode = $_REQUEST['mode'] ?: '';
+$extwsid = intval($_REQUEST['extwsid']);
+
+$EWSU = new ExtWSUtils();
+
+$smarty = new VteSmarty();
+$smarty->assign("MOD",$mod_strings);
+$smarty->assign("APP",$app_strings);
+$smarty->assign("THEME", $theme);
+$smarty->assign("IMAGE_PATH", "themes/$theme/images/");
+
+if ($mode == 'create' || $mode == 'edit') {
+
+	$info = $EWSU->getWSInfo($extwsid);
+
+	$smarty->assign("WSINFO", $info);
+	$smarty->assign("WSTYPES", $EWSU->ws_types);
+	$smarty->assign("WSMETHODS", $EWSU->ws_methods);
+	
+} elseif ($mode == 'save') {
+
+	$data = $EWSU->prepareDataFromRequest();
+
+	if ($extwsid > 0) {
+		$r = $EWSU->updateWS($extwsid, $data);
+	} else {
+		$r = $EWSU->insertWS($data);
+		$extwsid = $r;
+	}
+	
+	if ($r) {
+		$mode = '';
+		$list = $EWSU->getList();
+		$smarty->assign("WSLIST", $list);
+	} else {
+		// error
+		// TODO
+	}
+	
+	header('Location: index.php?module=Settings&action=ExtWSConfig&parentTab=Settings');
+	die();
+	
+} elseif ($mode == 'delete') {
+	$error = false;
+	
+	$info = $EWSU->getWSInfo($extwsid);
+
+	if (empty($info)) {
+		$error = getTranslatedString('LBL_NO_RECORD');
+	} else {
+		$r = $EWSU->deleteWS($extwsid);
+	}
+	
+	if (!empty($error)) {
+		$smarty->assign("LIST_ERROR", $error);
+	}
+	
+	// and display the list
+	$list = $EWSU->getList();
+	$smarty->assign("WSLIST", $list);
+} else {
+	$list = $EWSU->getList();
+	$smarty->assign("WSLIST", $list);
+}
+
+$smarty->assign("MODE", $mode);
+$smarty->assign("EXTWSID", $extwsid);
+
+$smarty->display('Settings/ExtWSConfig/ExtWS.tpl');

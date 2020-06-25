@@ -1,0 +1,21 @@
+<?php
+/* crmv@27589 crmv@192078 */
+
+require('../config.inc.php');
+chdir($root_directory);
+
+// crmv@91979
+require_once('include/MaintenanceMode.php');
+if (MaintenanceMode::check()) {
+	MaintenanceMode::display();
+	die();
+}
+// crmv@91979e
+
+require_once('include/utils/utils.php');
+require_once('modules/Calendar/InvitationController.php');
+
+RequestHandler::validateCSRFToken(); // crmv@171581
+
+$IC = new InvitationController();
+$IC->process($_REQUEST);
